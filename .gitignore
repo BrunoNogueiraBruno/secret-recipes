@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules and build output
+node_modules
+dist
+dist-ssr
+*.local
+
+# Python cache
+/api/__pycache__/
+/api/*.py[cod]
+/api/*$py.class
+
+# Python virtual environment
+/api/venv/
+
+/api/instance/
+/api/.env
+/api/.env.*
+
+# Python egg and packaging
+/api/*.egg
+/api/*.egg-info/
+/api/dist/
+/api/build/
+/api/.eggs/
+
+/api/migrations/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
