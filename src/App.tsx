@@ -1,22 +1,24 @@
-import { useEffect, useState } from 'react'
-import './App.css'
+import Login from './pages/Login';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
-  const [currentTime, setCurrentTime] = useState(0)
-
-  useEffect(() => {
-    fetch('/api/time').then((res) => res.json()).then((data) => {
-      setCurrentTime(data)
-    })
-  }, [])
-
   return (
-    <>
-    <div>
-    {currentTime.time}
-    </div>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
