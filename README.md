@@ -7,6 +7,7 @@
 * Vite
 * TailwindCSS
 * ReactQuery
+* MaterialUI
 
 ### Backend
 
